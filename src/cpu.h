@@ -11,17 +11,17 @@ typedef struct computer computer_t;
 
 typedef enum cpu_state
 {
-	running,
-	paused,
-	error,
-	shutdown
+	CPU_STATE_RUNNING,
+	CPU_STATE_PAUSED,
+	CPU_STATE_ERROR,
+	CPU_STATE_SHUTDOWN
 } cpu_state_t;
 
 typedef enum cpu_error
 {
-	no_error,
-	invalid_instruction,
-	invalid_operand
+	CPU_ERROR_NO,
+	CPU_ERROR_INVALID_INSTRUCTION,
+	CPU_ERROR_INVALID_OPERAND
 } cpu_error_t;
 
 typedef struct cpu
@@ -35,10 +35,10 @@ typedef struct cpu
 
 enum operand_type
 {
-	register_value,
-	register_pointer,
-	value,
-	pointer
+	OPERAND_TYPE_REGISTER_VALUE,
+	OPERAND_TYPE_REGISTER_POINTER,
+	OPERAND_TYPE_VALUE,
+	OPERAND_TYPE_POINTER
 };
 
 typedef uint8_t operand_type_t;

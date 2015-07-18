@@ -4,16 +4,17 @@
 #include <stdint.h>
 
 typedef struct device device_t;
-typedef uint8_t (*outb_t) (device_t*, uint8_t);
-typedef void    (*inb_t)  (device_t*, uint8_t, uint8_t);
+typedef void	 	(*out_t) (device_t*, uint8_t, uint32_t);
+typedef uint32_t	(*in_t)  (device_t*, uint8_t);
 
 typedef struct computer computer_t;
 typedef struct device
 {
     uint32_t    id;
     computer_t *computer;
-    outb_t      outb;
-    inb_t       inb;
+    out_t       out;
+    in_t        in;
+    uint32_t   *custom_ptr;
 } device_t;
 
 typedef struct device_list

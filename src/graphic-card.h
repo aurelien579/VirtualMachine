@@ -6,6 +6,11 @@
 
 #include <stdint.h>
 
+typedef struct
+{
+	uint8_t graphic_mode;
+} gc_t;
+
 void graphic_card_register (computer_t *computer);
 
 #endif

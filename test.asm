@@ -2,4 +2,6 @@ mov r1, 0x64
 mov r2, r1
 add r1, r0
 add r0, r1
+mov r0, 0x1
+out 0x1, 0x0
 sht

@@ -4,7 +4,9 @@ instruction_codes = [
 	('mov', 0x1),
 	('jmp', 0x2),
 	('add', 0x3),
-	('sht', 0x4)
+	('sht', 0x4),
+	('out', 0x5),
+	('in' , 0x6)
 ]
 
 def main():

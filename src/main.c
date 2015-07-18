@@ -8,7 +8,7 @@ int main (int argc, char* argv[])
 	computer_t *computer = computer_create ();
 	FILE *fi = fopen ("test.bin", "rb");
 
-	fread (computer->memory->content, 1, 64, fi);
+	fread (computer->memory->content, 1, 128, fi);
 
 	printf ("[INFO] Running...\n");
 	computer_start (computer);
